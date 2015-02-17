@@ -1,0 +1,16 @@
+{
+  "name": "parse-angular-sdk",
+  "version": "1.0.0",
+  "description": "Parse Angular custom SDK",
+  "main": "dist/parse-angular-sdk.min.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-uglify": "^0.7.0"
+  }
+}
