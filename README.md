@@ -15,3 +15,26 @@ This version of SDK does **not** contain the following Parse. modules:
 It also drops support for callback hashes. All methods are promises only. You need to have underscore/lodash included in your app too.
 
 Feel free to include them in your app using the method we used; which is isolating every module inside an Angular component, and replacing http requests using $http, promises using $q.
+
+Usage
+
+```javascript
+
+var module = angular.module('MyApp', ['Parse']);
+
+module.controller('MyCtrl', function($scope, ParseSDK){
+        
+    var Parse = ParseSDK; 
+
+    var query = new Parse.Query('Monsters');
+    query.equalTo('name', 'Casper');
+    query.find()
+    .then(function(results){
+        $scope.results = results;
+    })
+
+});
+
+
+
+```
