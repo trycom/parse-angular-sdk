@@ -5233,7 +5233,7 @@ module.factory('ParseUser', function(ParseObject, ParseCore){
             }
             options = options || {};
 
-            return ParseObject.prototype.save.call(this, attrs, newOptions)
+            return ParseObject.prototype.save.call(this, attrs, options)
             .then(function(model){
                 model._handleSaveResult(false);
                 return model;
@@ -5244,7 +5244,7 @@ module.factory('ParseUser', function(ParseObject, ParseCore){
         * @see ParseObject#fetch
         */
         fetch: function(options) {
-            return ParseObject.prototype.fetch.call(this, newOptions)
+            return ParseObject.prototype.fetch.call(this, options)
             .then(function(model){
                 model._handleSaveResult(false);
                 return model;
