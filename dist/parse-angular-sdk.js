@@ -5233,7 +5233,7 @@ module.factory('ParseUser', function(ParseObject, ParseCore){
             }
             options = options || {};
 
-            return ParseObject.prototype.save.call(this, attrs, newOptions)
+            return ParseObject.prototype.save.call(this, attrs, options)
             .then(function(model){
                 model._handleSaveResult(false);
                 return model;
